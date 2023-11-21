@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-avptoystorefrontend-master-144401-authRole",
+      "UnauthRoleArn": "arn:aws:iam::636794006665:role/amplify-avptoystorefrontend-master-144401-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::636794006665:role/amplify-avptoystorefrontend-master-144401-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-avptoystorefrontend-master-144401-deployment",
+      "UnauthRoleName": "amplify-avptoystorefrontend-master-144401-unauthRole",
+      "StackName": "amplify-avptoystorefrontend-master-144401",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:636794006665:stack/amplify-avptoystorefrontend-master-144401/82883420-4390-11ee-9df6-0ad387425108",
+      "AmplifyAppId": "d2kzj52cp9o8j1"
+    }
+  },
+  "auth": {
+    "avptoystorefrontend8c95b01b": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-avptoystorefrontend-master-144401-deployment/amplify-cfn-templates/auth/avptoystorefrontend8c95b01b-cloudformation-template.json",
+        "logicalId": "authavptoystorefrontend8c95b01b"
+      },
+      "lastPushTimeStamp": "2023-08-25T21:51:05.030Z",
+      "output": {
+        "UserPoolId": "ap-southeast-1_ymhySHmJt",
+        "AppClientIDWeb": "scpobmc08nbiurnadl5j5crf4",
+        "AppClientID": "4jm9v5b6vcjqt3e3ar1lauv1si",
+        "IdentityPoolId": "ap-southeast-1:2e992a27-a038-44d0-b61e-cb628b1f9d2f",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-southeast-1:636794006665:userpool/ap-southeast-1_ymhySHmJt",
+        "IdentityPoolName": "avptoystorefrontend8c95b01b_identitypool_8c95b01b__master",
+        "UserPoolName": "avptoystorefrontend8c95b01b_userpool_8c95b01b"
+      },
+      "lastPushDirHash": "ov+bQXG0wp0dUYmTzw0iRR7Rig8="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-avptoystorefrontend-master-144401-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2023-08-25T21:51:05.845Z",
+      "output": {},
+      "lastPushDirHash": "TCGDFSPKUtoFBodODxoSTMf1hUU="
+    }
+  }
+}
