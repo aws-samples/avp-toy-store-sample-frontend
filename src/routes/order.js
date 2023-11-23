@@ -108,7 +108,7 @@ export default function Order() {
           } else {
             setOrderLabelContent(
               <Card variation="outlined" align="left">
-                <p align="left">Succesfully got order Receipt</p>
+                <p align="left">Succesfully got order label</p>
                 <img src="/label.jpeg" width="20%" height="20%" />
               </Card>
             );
