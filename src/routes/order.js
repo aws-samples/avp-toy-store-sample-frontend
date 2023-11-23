@@ -1,11 +1,8 @@
 import request from "../common/Requestor";
-//import labelImage from "../../public/label.jpeg"
-//import receiptImage from "../../public/receipt.jpeg"
 import {
   useAuthenticator,
   Card,
   Button,
-  Flex,
   Divider,
   Alert,
   Collection,
@@ -51,12 +48,14 @@ export default function Order() {
     setOrderDetailsContent("loading...");
     let orderDetailsResult = await request("/order/" + orderId, "GET", storeId);
     if (typeof orderDetailsResult === "string") {
+      if (orderDetailsResult )
       setOrderDetailsContent(
         <Alert
           variation={"error"}
           isDismissible={true}
           heading={orderDetailsResult}
         >
+          
           User {user?.username} unauthorized to access order {orderId} in store - 
           {storeId}
         </Alert>
@@ -103,8 +102,16 @@ export default function Order() {
     if (orderPermissionsResult.includes("GetOrderLabel")) {
       request("/order/" + orderId + "/label", "GET", storeId).then(
         (orderLabelResult) => {
-          if (typeof orderLabelResult === "string") {
-            setOrderLabelContent(unauthorizedOrderLabelContent);
+          if (typeof orderLabelResult === "string" && orderLabelResult != "Unauthorized") {
+            setOrderLabelContent(
+              <Alert
+                variation={"error"}
+                isDismissible={true}
+                heading={orderLabelResult}
+              >
+                {orderLabelResult}
+              </Alert>
+            );
           } else {
             setOrderLabelContent(
               <Card variation="outlined" align="left">
@@ -129,9 +136,17 @@ export default function Order() {
     setOrderReceiptContent("loading...");
     if (orderPermissionsResult.includes("GetOrderReceipt")) {
       request("/order/" + orderId + "/receipt", "GET", storeId).then(
-        (orderLabelResult) => {
-          if (typeof orderLabelResult === "string") {
-            setOrderReceiptContent(unauthorizedOrderReceiptContent);
+        (orderReceiptResult) => {
+          if (typeof orderReceiptResult === "string" && orderReceiptResult != "Unauthorized") {
+            setOrderReceiptContent(
+              <Alert
+                variation={"error"}
+                isDismissible={true}
+                heading={orderReceiptResult}
+              >
+                {orderReceiptResult}
+              </Alert>
+            );
           } else {
             setOrderReceiptContent(
               <Card variation="outlined" align="left">
