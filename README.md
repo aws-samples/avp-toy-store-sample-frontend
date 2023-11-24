@@ -8,7 +8,7 @@ The application uses Amazon Cognito for authentication and uses Amazon Verified 
 
 This application is split across 2 packages 
 
-1. [avp-toy-store-sample](https://github.com/aws-samples/avp-toy-store-sample) package contains the backend code, include API-Gateway, Lambda's and Verified Permissions 
+1. [avp-toy-store-sample](https://github.com/apandays/avp-toy-store-sample/) package contains the backend code, include API-Gateway, Lambda's and Verified Permissions 
 
 2. [avp-toy-store-sample-frontend] (https://github.com/aws-samples/avp-toy-store-sample-frontend) package contains the frontend code and Cognito configuration.
 
