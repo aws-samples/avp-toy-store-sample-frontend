@@ -12,6 +12,6 @@ This application is split across 2 packages
 
 2. [avp-toy-store-sample-frontend] (https://github.com/aws-samples/avp-toy-store-sample-frontend) package contains the frontend code and Cognito configuration.
 
-You can find further details about the sample application, including it's design and deployment by referring to the [avp-toy-store-sample readme file](https://gitlab.aws.dev/pabhi/avp-toy-store-sample/-/blob/main/README.md?ref_type=heads). 
+You can find further details about the sample application, including it's design and deployment by referring to the [avp-toy-store-sample readme file](https://github.com/aws-samples/avp-toy-store-sample?tab=readme-ov-file#avp-toy-store-sample-application). 
 
 You can deploy this package to you AWS account by using the deploy using Amplify button.  
